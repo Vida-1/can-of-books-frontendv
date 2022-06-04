@@ -28,10 +28,10 @@ class BestBooks extends React.Component {
         books: response.data
       })
     } catch (error) {
-      console.error('Error in BestBooks componentDidMount: ', error),
-        this.setState({
-          errorMessage: `Status Code: ${error.response.status}: ${error.resonse.data}`
-        })
+      console.error('Error in BestBooks componentDidMount: ', error);
+      this.setState({
+        errorMessage: `Status Code: ${error.response.status}: ${error.resonse.data}`
+      })
     }
   }
 
@@ -47,18 +47,18 @@ class BestBooks extends React.Component {
         {this.state.books.length ? (
           <Carousel>
             {this.state.books.map(book => (
-              
-            <Carousel.Item>
-              <Image
-                className="w-100"
-                src={bookImg}
-                alt={book.title}
-              />
-              <Carousel.Caption>
+
+              <Carousel.Item>
+                <Image
+                  className="w-100"
+                  src={bookImg}
+                  alt={book.title}
+                />
+                <Carousel.Caption>
                   <h2 className="carousel-text">{book.title}</h2>
                   <p className="carousel-text">{book.description}</p>
                   <p className="carousel-text">{book.status}</p>
-              </Carousel.Caption>
+                </Carousel.Caption>
               </Carousel.Item>
             ))}
           </Carousel>
