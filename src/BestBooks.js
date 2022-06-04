@@ -30,7 +30,7 @@ class BestBooks extends React.Component {
     } catch (error) {
       console.error('Error in BestBooks componentDidMount: ', error);
       this.setState({
-        errorMessage: `Status Code: ${error.response.status}: ${error.resonse.data}`
+        errorMessage: `Status Code: ${error.response.status}: ${error.response.data}`
       })
     }
   }
