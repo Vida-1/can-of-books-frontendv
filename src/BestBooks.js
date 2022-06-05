@@ -20,7 +20,7 @@ class BestBooks extends React.Component {
       const config = {
         method: 'get',
         baseURL: process.env.REACT_APP_SERVER,
-        url: '/books'  // this is the endpoint
+        url: './books'  // this is the endpoint
       }
 
       const response = await axios(config);
