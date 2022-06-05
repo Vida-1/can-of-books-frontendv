@@ -28,7 +28,7 @@ class BestBooks extends React.Component {
         books: response.data
       })
     } catch (error) {
-      console.error('Error in BestBooks componentDidMount: ', error);
+      console.error('Error in BestBooks componentDidMount: ', error)
       this.setState({
         errorMessage: `Status Code: ${error.response.status}: ${error.response.data}`
       })
